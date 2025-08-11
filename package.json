@@ -1,25 +1,38 @@
 {
-  "name": "next-rtk-tailwind-page",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "15.4.7",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "2.2.0",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+    "name": "next-rtk-tailwind-page",
+    "version": "0.1.0",
+    "private": true,
+    "repository": "git@github.com:coolbeatz71/next-rtk-tailwind-page.git",
+    "author": "coolbeatz71 <sigmacool@gmail.com>",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "dev": "next dev --turbopack",
+        "build": "next build",
+        "start": "next start",
+        "type:check": "tsc",
+        "lint:code": "biome lint --no-errors-on-unmatched ./src",
+        "lint:code:fix": "biome check --write ./src",
+        "lint:types": "tsc --noEmit",
+        "analyze": "cross-env ANALYZE=true next build",
+        "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+        "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
+        "prepare": "husky"
+    },
+    "dependencies": {
+        "next": "15.4.7",
+        "react": "19.1.0",
+        "react-dom": "19.1.0"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "2.2.0",
+        "@tailwindcss/postcss": "^4",
+        "@types/node": "^20",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.1.5",
+        "tailwindcss": "^4",
+        "typescript": "^5"
+    }
 }
