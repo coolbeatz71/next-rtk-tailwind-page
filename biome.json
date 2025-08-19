@@ -7,7 +7,8 @@
         "indentWidth": 4,
         "lineEnding": "lf",
         "lineWidth": 80,
-        "attributePosition": "auto"
+        "attributePosition": "auto",
+        "includes": ["!src/infrastructure/api/JobBoardApi.ts"]
     },
     "assist": {
         "actions": {
@@ -29,7 +30,8 @@
                 "noUnusedPrivateClassMembers": "error",
                 "noUnusedLabels": "error"
             }
-        }
+        },
+        "includes": ["!src/infrastructure/api/JobBoardApi.ts"]
     },
     "javascript": {
         "formatter": {
@@ -43,5 +45,8 @@
             "quoteStyle": "double",
             "attributePosition": "auto"
         }
+    },
+    "files": {
+        "includes": ["src/**"]
     }
 }
