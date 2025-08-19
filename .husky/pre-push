@@ -1,0 +1,1 @@
+enforce-branch-name '^(feat|chore|bug|fix|doc|docs|style|refactor|perf|test|build|ci|revert|)-[a-z]+(-[a-z]+)*$'
